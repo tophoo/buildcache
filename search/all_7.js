@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['inject_5fseparator_53',['inject_separator',['../classbcache_1_1hasher__t.html#ab09ef974f18206e0a9ab2af52885a989',1,'bcache::hasher_t']]],
-  ['invoked_5fas_54',['invoked_as',['../classbcache_1_1file_1_1exe__path__t.html#add0737ef467cec81b6bd960449004740',1,'bcache::file::exe_path_t']]],
-  ['is_5fconnected_55',['is_connected',['../classbcache_1_1http__cache__provider__t.html#aa865f1371735d42d478aa0147d1f15ea',1,'bcache::http_cache_provider_t::is_connected()'],['../classbcache_1_1redis__cache__provider__t.html#a8af390226959dcacc8a1be55987d1331',1,'bcache::redis_cache_provider_t::is_connected()'],['../classbcache_1_1remote__cache__t.html#a66cbfc8c82e702e4eb8713f901769c12',1,'bcache::remote_cache_t::is_connected()'],['../classbcache_1_1remote__cache__provider__t.html#a30b82006fd9a0f44a05f42ac6bf98c65',1,'bcache::remote_cache_provider_t::is_connected()']]],
-  ['is_5fdir_56',['is_dir',['../classbcache_1_1file_1_1file__info__t.html#aba6f7de210ff51952b22bf28d136c8db',1,'bcache::file::file_info_t']]],
-  ['is_5fvalid_57',['is_valid',['../classbcache_1_1data__store__t_1_1item__t.html#a9a5a897a2ac887531d0e4cec7af2a29a',1,'bcache::data_store_t::item_t']]],
-  ['item_5ft_58',['item_t',['../classbcache_1_1data__store__t_1_1item__t.html',1,'bcache::data_store_t::item_t'],['../classbcache_1_1data__store__t_1_1item__t.html#a28f216315051be67cc8b962b122689a0',1,'bcache::data_store_t::item_t::item_t(const std::string &amp;value)'],['../classbcache_1_1data__store__t_1_1item__t.html#a0d9ff3b030dced67f3415ebdfb12af6a',1,'bcache::data_store_t::item_t::item_t()']]]
+  ['handle_5fcommand_48',['handle_command',['../classbcache_1_1program__wrapper__t.html#a179e4dde096f8408643f9139215b6ebf',1,'bcache::program_wrapper_t']]],
+  ['has_5flock_49',['has_lock',['../classbcache_1_1file_1_1file__lock__t.html#acec45dd643662afd214f10313b010a93',1,'bcache::file::file_lock_t']]],
+  ['hash_50',['hash',['../classbcache_1_1direct__mode__manifest__t.html#a4f068b6f08e5da575e9f803d58e7f90a',1,'bcache::direct_mode_manifest_t']]],
+  ['hash_5ft_51',['hash_t',['../classbcache_1_1hasher__t_1_1hash__t.html',1,'bcache::hasher_t']]],
+  ['hasher_5ft_52',['hasher_t',['../classbcache_1_1hasher__t.html',1,'bcache::hasher_t'],['../classbcache_1_1hasher__t.html#ac01d7371fe2a68a4a71dc9187fb9a74e',1,'bcache::hasher_t::hasher_t()']]],
+  ['http_5fcache_5fprovider_5ft_53',['http_cache_provider_t',['../classbcache_1_1http__cache__provider__t.html',1,'bcache']]]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BuildCache: Main Page</title>
+<title>BuildCache: BuildCache internals documentation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,11 +60,25 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">BuildCache Documentation</div>  </div>
+<div class="title">BuildCache internals documentation </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>This documentation describes the BuildCache internals. It is mainly useful for BuildCache contributors.</p>
+<h1><a class="anchor" id="structur_sec"></a>
+Code structure</h1>
+<p>The BuildCache source code is divided into the following parts:</p><ul>
+<li>base - A portable set of support classes and functions.</li>
+<li>sys - System specific support functions.</li>
+<li>cache - The implementation of the cache logic (wrapper independent).</li>
+<li>wrappers - The wrappers for different compilers and programs.</li>
+<li>config - Program configuration logic.</li>
+<li>third_party - Third party libraries. </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

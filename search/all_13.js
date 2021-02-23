@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zero_5fstats_114',['zero_stats',['../classbcache_1_1local__cache__t.html#ae3ecdb915d5c553bd91e8e0ed0aa280b',1,'bcache::local_cache_t']]]
+  ['value_113',['value',['../classbcache_1_1data__store__t_1_1item__t.html#ac6f260b82ad3d334d567a2ae8d683e1a',1,'bcache::data_store_t::item_t']]],
+  ['virtual_5fpath_114',['virtual_path',['../classbcache_1_1file_1_1exe__path__t.html#ac4deab18e52adcbc25d789493d7a658b',1,'bcache::file::exe_path_t']]]
 ];
