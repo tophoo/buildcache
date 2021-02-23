@@ -93,9 +93,9 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>bcache {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>perf {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">enum</span> id_t {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebcache.html">bcache</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacebcache_1_1config.html#a5faf1ed0a00cf440683a894fb5049b47">perf</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="namespacebcache_1_1perf.html#abaea4e72b5eb5f0a9aff534f12ef07c0">   28</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="namespacebcache_1_1perf.html#abaea4e72b5eb5f0a9aff534f12ef07c0">id_t</a> {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  ID_FIND_EXECUTABLE = 0,</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  ID_FIND_WRAPPER = 1,</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  ID_LUA_INIT = 2,</div>
@@ -120,23 +120,23 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  NUM_PERF_IDS</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;int64_t start();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;int64_t <a class="code" href="namespacebcache_1_1perf.html#a6ca9a8556fe0a18666027c21feea46e1">start</a>();</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> stop(<span class="keyword">const</span> int64_t start_time, <span class="keyword">const</span> id_t <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacebcache_1_1perf.html#a85823d62ca3335b109d72effa4b78a83">stop</a>(<span class="keyword">const</span> int64_t start_time, <span class="keyword">const</span> <a class="code" href="namespacebcache_1_1perf.html#abaea4e72b5eb5f0a9aff534f12ef07c0">id_t</a> <span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> report();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacebcache_1_1perf.html#a5e42c106243eb612e9d7e97a0d37e62c">report</a>();</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classbcache_1_1perf_1_1perf__scope__t.html">   66</a></span>&#160;<span class="keyword">class </span><a class="code" href="classbcache_1_1perf_1_1perf__scope__t.html">perf_scope_t</a> {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classbcache_1_1perf_1_1perf__scope__t.html">perf_scope_t</a>(<span class="keyword">const</span> id_t <span class="keywordtype">id</span>) : m_id(<span class="keywordtype">id</span>), m_t0(start()) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <a class="code" href="classbcache_1_1perf_1_1perf__scope__t.html">perf_scope_t</a>(<span class="keyword">const</span> <a class="code" href="namespacebcache_1_1perf.html#abaea4e72b5eb5f0a9aff534f12ef07c0">id_t</a> <span class="keywordtype">id</span>) : m_id(<span class="keywordtype">id</span>), m_t0(<a class="code" href="namespacebcache_1_1perf.html#a6ca9a8556fe0a18666027c21feea46e1">start</a>()) {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  ~<a class="code" href="classbcache_1_1perf_1_1perf__scope__t.html">perf_scope_t</a>() {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    stop(m_t0, m_id);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="namespacebcache_1_1perf.html#a85823d62ca3335b109d72effa4b78a83">stop</a>(m_t0, m_id);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> id_t m_id;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keyword">const</span> <a class="code" href="namespacebcache_1_1perf.html#abaea4e72b5eb5f0a9aff534f12ef07c0">id_t</a> m_id;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">const</span> int64_t m_t0;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}  <span class="comment">// namespace perf</span></div>
@@ -149,7 +149,13 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif  // BUILDCACHE_PERF_UTILS_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespacebcache_1_1perf_html_a5e42c106243eb612e9d7e97a0d37e62c"><div class="ttname"><a href="namespacebcache_1_1perf.html#a5e42c106243eb612e9d7e97a0d37e62c">bcache::perf::report</a></div><div class="ttdeci">void report()</div><div class="ttdoc">Report the results.</div><div class="ttdef"><b>Definition:</b> perf_utils.cpp:74</div></div>
+<div class="ttc" id="anamespacebcache_1_1perf_html_a6ca9a8556fe0a18666027c21feea46e1"><div class="ttname"><a href="namespacebcache_1_1perf.html#a6ca9a8556fe0a18666027c21feea46e1">bcache::perf::start</a></div><div class="ttdeci">int64_t start()</div><div class="ttdoc">Start measuring time.</div><div class="ttdef"><b>Definition:</b> perf_utils.cpp:65</div></div>
+<div class="ttc" id="anamespacebcache_html"><div class="ttname"><a href="namespacebcache.html">bcache</a></div><div class="ttdoc">The top level namespace.</div><div class="ttdef"><b>Definition:</b> compressor.cpp:34</div></div>
 <div class="ttc" id="aclassbcache_1_1perf_1_1perf__scope__t_html"><div class="ttname"><a href="classbcache_1_1perf_1_1perf__scope__t.html">bcache::perf::perf_scope_t</a></div><div class="ttdoc">A scoped perf logger.</div><div class="ttdef"><b>Definition:</b> perf_utils.hpp:66</div></div>
+<div class="ttc" id="anamespacebcache_1_1perf_html_abaea4e72b5eb5f0a9aff534f12ef07c0"><div class="ttname"><a href="namespacebcache_1_1perf.html#abaea4e72b5eb5f0a9aff534f12ef07c0">bcache::perf::id_t</a></div><div class="ttdeci">id_t</div><div class="ttdoc">Recognized instrumentation IDs.</div><div class="ttdef"><b>Definition:</b> perf_utils.hpp:28</div></div>
+<div class="ttc" id="anamespacebcache_1_1perf_html_a85823d62ca3335b109d72effa4b78a83"><div class="ttname"><a href="namespacebcache_1_1perf.html#a85823d62ca3335b109d72effa4b78a83">bcache::perf::stop</a></div><div class="ttdeci">void stop(const int64_t start_time, const id_t id)</div><div class="ttdoc">Stop measuring time.</div><div class="ttdef"><b>Definition:</b> perf_utils.cpp:69</div></div>
+<div class="ttc" id="anamespacebcache_1_1config_html_a5faf1ed0a00cf440683a894fb5049b47"><div class="ttname"><a href="namespacebcache_1_1config.html#a5faf1ed0a00cf440683a894fb5049b47">bcache::config::perf</a></div><div class="ttdeci">bool perf()</div><div class="ttdef"><b>Definition:</b> configuration.cpp:660</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

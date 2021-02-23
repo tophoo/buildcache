@@ -68,6 +68,9 @@ $(function() {
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introduction</h1>
 <p>This documentation describes the BuildCache internals. It is mainly useful for BuildCache contributors.</p>
+<h1><a class="anchor" id="wrapper_sec"></a>
+Creating a new program wrapper</h1>
+<p>In order to add support for a new compiler or program, create a new class that inherits from the <a class="el" href="classbcache_1_1program__wrapper__t.html">bcache::program_wrapper_t</a> class.</p>
 <h1><a class="anchor" id="structur_sec"></a>
 Code structure</h1>
 <p>The BuildCache source code is divided into the following parts:</p><ul>
@@ -76,7 +79,20 @@ Code structure</h1>
 <li>cache - The implementation of the cache logic (wrapper independent).</li>
 <li>wrappers - The wrappers for different compilers and programs.</li>
 <li>config - Program configuration logic.</li>
-<li>third_party - Third party libraries. </li>
+<li>third_party - Third party libraries.</li>
+</ul>
+<h1><a class="anchor" id="namespaces_sec"></a>
+Namespaces</h1>
+<p>The following namespaces are used in BuildCache:</p><ul>
+<li><a class="el" href="namespacebcache.html">bcache</a></li>
+<li><a class="el" href="namespacebcache_1_1comp.html">bcache::comp</a></li>
+<li><a class="el" href="namespacebcache_1_1config.html">bcache::config</a></li>
+<li><a class="el" href="namespacebcache_1_1debug.html">bcache::debug</a></li>
+<li><a class="el" href="namespacebcache_1_1file.html">bcache::file</a></li>
+<li><a class="el" href="namespacebcache_1_1perf.html">bcache::perf</a></li>
+<li><a class="el" href="namespacebcache_1_1serialize.html">bcache::serialize</a></li>
+<li><a class="el" href="namespacebcache_1_1sys.html">bcache::sys</a></li>
+<li><a class="el" href="namespacebcache_1_1time.html">bcache::time</a> </li>
 </ul>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
