@@ -58,8 +58,6 @@
 namespace bcache {
 namespace sys {
 namespace {
-const std::string TEMP_FOLDER_NAME = "tmp";
-
 // This is a workaround for buggy compiler identification in ICECC: It will not properly identify
 // C++ compilers that do not end with "++", for instance.
 std::string make_exe_path_suitable_for_icecc(const std::string& path) {
@@ -577,7 +575,7 @@ void print_raw_stderr(const std::string& str) {
 }
 
 std::string get_local_temp_folder() {
-  auto tmp_path = file::append_path(config::dir(), TEMP_FOLDER_NAME);
+  auto tmp_path = config::tmp_dir();
   file::create_dir_with_parents(tmp_path);
   return tmp_path;
 }

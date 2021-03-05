@@ -33,6 +33,8 @@ namespace {
 // Various constants.
 const std::string ROOT_FOLDER_NAME = ".buildcache";
 const std::string CONFIGURATION_FILE_NAME = "config.json";
+const std::string TEMP_FOLDER_NAME = "tmp";
+
 const int64_t DEFAULT_MAX_CACHE_SIZE = 5368709120L;        // 5 GiB
 const int64_t DEFAULT_MAX_LOCAL_ENTRY_SIZE = 134217728L;   // 128 MiB
 const int64_t DEFAULT_MAX_REMOTE_ENTRY_SIZE = 134217728L;  // 128 MiB
@@ -57,6 +59,7 @@ int32_t s_compress_level = -1;
 int32_t s_debug = -1;
 bool s_disable = false;
 std::string s_dir;
+std::string s_tmp_dir;
 bool s_direct_mode = false;
 bool s_hard_links = false;
 string_list_t s_hash_extra_files;
@@ -331,6 +334,13 @@ void load_from_file(const std::string& file_name) {
     }
   }
 
+  {
+    const auto* node = cJSON_GetObjectItemCaseSensitive(root, "tmp_dir");
+    if ((cJSON_IsString(node) != 0) && node->valuestring != nullptr) {
+      s_tmp_dir = std::string(node->valuestring);
+    }
+  }
+
   cJSON_Delete(root);
 }
 }  // namespace
@@ -373,6 +383,9 @@ void init() {
   try {
     // Get the BuildCache home directory.
     s_dir = get_dir();
+
+    // Set the default temporary directory to the BuildCache home directory
+    s_tmp_dir = file::append_path(s_dir, TEMP_FOLDER_NAME);
 
     // Load any paramaters from the user configuration file.
     // Note: We do this before reading the configuration from the environment, so that the
@@ -575,6 +588,13 @@ void init() {
       }
     }
 
+    {
+      const env_var_t env("BUILDCACHE_TMP_DIR");
+      if (env) {
+        s_tmp_dir = env.as_string();
+      }
+    }
+
     // We also look for Lua files in the cache root dir (i.e. ${BUILDCACHE_DIR}/lua).
     // Note: We give the default Lua path the lowest priority.
     s_lua_paths += file::append_path(s_dir, "lua");
@@ -615,6 +635,10 @@ int32_t debug() {
 
 const std::string& dir() {
   return s_dir;
+}
+
+const std::string& tmp_dir() {
+  return s_tmp_dir;
 }
 
 bool direct_mode() {
