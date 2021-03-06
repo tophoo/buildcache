@@ -159,6 +159,7 @@ jobs:
       run: |
         ../test_scripts/run_file_lock_stresstest.sh
         ../test_scripts/build_with_buildcache.sh
+        python ../test_scripts/config/run_configuration_tests.py
 
     - name: Run static checks
       if: ${{ runner.os == 'Linux' }}
